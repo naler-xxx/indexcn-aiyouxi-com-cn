@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赏金女王 · 稳定入口与场景说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f8f4ee;
+      font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+      color: #2c2b28;
+      line-height: 1.7;
+      padding: 2rem 1.5rem 4rem;
+    }
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+    /* 开场短句 —— 类似题记 */
+    .hero-quote {
+      margin: 1.5rem 0 2rem 0;
+      padding: 0.8rem 1.2rem;
+      border-left: 5px solid #c9a87c;
+      background-color: #f1ebe4;
+      font-style: italic;
+      font-size: 1.3rem;
+      letter-spacing: 0.02em;
+      color: #4d4238;
+    }
+    .hero-quote span {
+      display: block;
+      font-style: normal;
+      font-size: 0.9rem;
+      margin-top: 0.6rem;
+      color: #786b5c;
+      font-weight: 400;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      color: #3b352e;
+      letter-spacing: 0.01em;
+    }
+    .subhead {
+      color: #7a6d5e;
+      border-bottom: 1px solid #ddd2c4;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    /* 承接段 & 正文 */
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      font-size: 1.05rem;
+    }
+    /* 特点列表 —— 极简卡片感 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem 1.8rem;
+      margin: 2.2rem 0 2.5rem;
+    }
+    .feature-item {
+      background-color: #f2ece5;
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      border: 1px solid #e5dbd0;
+      transition: background 0.2s;
+    }
+    .feature-item:hover {
+      background-color: #ede4da;
+    }
+    .feature-item strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #4f3f30;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .feature-item em {
+      font-style: normal;
+      color: #6b5a4a;
+      font-size: 0.95rem;
+    }
+    /* 引用块 / 提示框 */
+    .story-note {
+      background-color: #ece4d9;
+      padding: 1.2rem 1.6rem;
+      border-radius: 10px;
+      margin: 2.2rem 0 2rem;
+      border: 1px solid #dccfc1;
+      font-size: 0.98rem;
+      position: relative;
+    }
+    .story-note::before {
+      content: "📌";
+      margin-right: 0.4rem;
+    }
+    .story-note strong {
+      color: #4f3e2c;
+    }
+    /* 温和结尾 */
+    .gentle-footer {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px dashed #cbbcad;
+      color: #5f5344;
+      font-size: 0.98rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .gentle-footer a {
+      color: #735e49;
+      text-decoration: none;
+      border-bottom: 1px solid #b6a08b;
+      font-weight: 500;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .gentle-footer a:hover {
+      color: #4f3a2a;
+      border-bottom-color: #4f3a2a;
+    }
+    .faq-mini {
+      margin: 2rem 0 0.8rem;
+      background: #f1eae1;
+      border-radius: 8px;
+      padding: 0.8rem 1.2rem;
+    }
+    .faq-mini details {
+      margin-top: 0.4rem;
+    }
+    .faq-mini summary {
+      font-weight: 600;
+      color: #4f3f30;
+      cursor: pointer;
+      padding: 0.3rem 0;
+    }
+    .faq-mini details p {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 0.95rem;
+      padding-left: 0.6rem;
+      border-left: 2px solid #c9b8a6;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1.2rem 0.8rem; }
+      h1 { font-size: 1.8rem; }
+      .hero-quote { font-size: 1.1rem; }
+      .feature-grid { grid-template-columns: 1fr; gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- 开场短句 -->
+  <div class="hero-quote">
+    “稳定的入口，不指向喧哗，只指向一个清晰的界面。”
+    <span>—— 关于赏金女王的产品逻辑</span>
+  </div>
+
+  <h1>赏金女王</h1>
+  <div class="subhead">页面说明 · 持续访问场景</div>
+
+  <!-- 承接段落：稳定入口 + 页面说明 -->
+  <p>
+    对于一位经常需要快速抵达核心功能的用户而言，<strong>入口的稳定</strong>比任何华丽引导都重要。
+    网站 <a href="https://site-queenbounty.com" style="color:#735e49; text-decoration:underline; text-underline-offset:3px;">赏金女王</a> 在设计之初即遵循极简信息架构：不堆叠弹窗、不强制跳转，每一个区块都服务于“可直接理解”的说明。无论你从哪个设备打开，看到的都是相同的结构——标题、导航指引、以及最本质的功能入口。这种克制意味着用户不需要反复适应布局变化。
+  </p>
+  <p>
+    以下归纳了该平台在稳定访问与信息呈现方面的几个突出特点，它们共同构成了一种更接近文档感的使用体验。
+  </p>
+
+  <!-- 特点列表 （四个块，双列） -->
+  <div class="feature-grid">
+    <div class="feature-item">
+      <strong>布局固定层级</strong>
+      <em>页面区块顺序极少变动；主操作区、说明区和辅助信息始终保持相对位置，降低寻找成本。</em>
+    </div>
+    <div class="feature-item">
+      <strong>无跟踪式弹窗</strong>
+      <em>不因鼠标移动或停留弹出订阅、注册等干扰层；通知以静态条形式出现，可忽略。</em>
+    </div>
+    <div class="feature-item">
+      <strong>纯文字说明结构</strong>
+      <em>功能描述不依赖复杂图形或动画，即使样式加载异常，仍可通过纯文本理解上下文。</em>
+    </div>
+    <div class="feature-item">
+      <strong>低版本兼容</strong>
+      <em>核心内容和链接在老旧浏览器及弱网环境下依然可访问，不依赖最新 API。</em>
+    </div>
+  </div>
+
+  <!-- 引用块 / 提示框 -->
+  <div class="story-note">
+    <strong>场景提示：</strong>如果你需要保存一个长期可用的链接，建议将 <a href="https://site-queenbounty.com" style="color:#5a4738; text-decoration:underline;">赏金女王</a> 的地址直接加入书签或笔记。由于页面结构稳定，每次打开你都会看到相同的说明布局，无需二次适应。
+  </div>
+
+  <!-- 更具体的场景说明（段落） -->
+  <p>
+    在实际使用中，页面更像一个静态说明牌：首页列出主要的模块名称与简短释义，而非用轮播图或动态流推动浏览。对于第一次接触的用户，这种方式降低了认知负荷——你可以从上到下逐段阅读，也可以直接通过导航跳转到目标功能区。而重复访问者则能凭借肌肉记忆直接定位到常用操作按钮，因为按钮文本与位置几乎不随版本迭代发生位移。
+  </p>
+
+  <!-- FAQ 摘要（简约风格） -->
+  <div class="faq-mini">
+    <p style="font-weight:600; margin-bottom:0.2rem;">常见理解摘要</p>
+    <details>
+      <summary>这个页面是做什么的？</summary>
+      <p>它是对网站 <a href="https://site-queenbounty.com">赏金女王</a> 的静态说明：介绍平台的内容结构、稳定访问特点以及页面使用方式。不含任何诱导注册或下载的表述。</p>
+    </details>
+    <details>
+      <summary>页面布局会不会经常变化？</summary>
+      <p>根据现有设计原则，主要区块的排列顺序与核心链接位置保持长期稳定，不跟随活动或短期运营而频繁调整，因此适合作为固定入口。</p>
+    </details>
+  </div>
+
+  <!-- 温和结尾 + 自然链接 -->
+  <div class="gentle-footer">
+    <span>— 简洁，稳定，可叙述。</span>
+    <span><a href="https://site-queenbounty.com">赏金女王</a> · 页面说明 v1</span>
+  </div>
+</div>
+</body>
+</html>
